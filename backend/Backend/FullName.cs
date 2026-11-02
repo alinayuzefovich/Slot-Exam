@@ -16,4 +16,9 @@ class FullName
         Name = name;
         Surname = surname;
     }
+
+    public override string ToString()
+    {
+        return $"{Surname} {Name}";
+    }
 }

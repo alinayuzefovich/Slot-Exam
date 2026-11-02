@@ -10,16 +10,20 @@ class Slot
 {
     private static int _currentId;
     public int Id { get; }
-    public DateTime Time { get; }
+    public DateTime StartTime { get; }
+    public DateTime EndTime { get; }
     public Event Event { get; }
-    public bool IsBooked { get; }
-    public int Capacity { get; }
+    public int CurrentCapacity { get; }
+    public int MaxCapacity { get; }
+    public bool IsFull => MaxCapacity == CurrentCapacity;
+    public bool IsPast => DateTime.UtcNow > StartTime;
 
-    public Slot(Event e, int capacity, DateTime time)
+    public Slot(Event e, int capacity, DateTime startTime, DateTime endTime)
     {
         Id = _currentId++;
-        Capacity = capacity;
-        Time = time;
+        MaxCapacity = capacity;
+        StartTime = startTime;
+        EndTime = endTime;
         Event = e;
     }
 }

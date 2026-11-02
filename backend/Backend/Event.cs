@@ -16,6 +16,7 @@ class Event
     public bool IsActive { get; }
     public int OwnerId { get; }
 
+
     public Event(EventDescription description, int ownerId)
     {
         Id = _currentId++;

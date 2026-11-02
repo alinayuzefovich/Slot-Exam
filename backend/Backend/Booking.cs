@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 class Booking
 {
     private static int _currentId;
-    public static Slot BookedSlot { get; }
+    public Slot BookedSlot { get; }
+    public User Owner { get; }
 
-    public Booking(Slot bookedSlot)
+    public Booking(User owner, Slot bookedSlot)
     {
-        bookedSlot = bookedSlot;
+        Owner = owner;
+        BookedSlot = bookedSlot;
     }
 }
 
