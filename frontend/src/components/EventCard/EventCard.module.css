@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--fallback-border);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--text);
+  text-align: left;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 12px;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 600;
+}
