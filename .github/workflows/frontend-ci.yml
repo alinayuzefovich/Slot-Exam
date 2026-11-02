@@ -21,11 +21,8 @@ jobs:
         uses: actions/сheckout@v7
 
       - name: Set up Node.js
-<<<<<<< HEAD
         uses: actions/setup-node@v7
-=======
-        uses: actions/setup-node@v6
->>>>>>> 61be95c (chore: update frontend CI)
+
         with:
           node-version: 24
           cache: npm
