@@ -24,13 +24,16 @@ Telegram Mini App для записи студентов на экзамены, 
 
 Ожидаемый результат: accepting connections.
 
-## Подключение к базе данных
+Подключение к базе данных
 
 Если приложение запущено непосредственно на компьютере, используйте:
 
-postgresql+psycopg://postgres:postgres@localhost:5432/university_booking
+postgresql+psycopg://postgres:postgres@localhost:5432/slot_exam
 
-Если приложение запущено внутри Docker Compose, адрес базы данных — db:5432.
+Если приложение запущено внутри Docker Compose, адрес базы данных — db:5432. Строка подключения:
+
+postgresql+psycopg://postgres:postgres@db:5432/slot_exam
+
 
 ## Остановка PostgreSQL
 
