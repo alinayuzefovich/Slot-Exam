@@ -1,10 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import App from './App'
+import { initializeTelegram } from './telegram/init'
 import './index.css'
-import App from './App.tsx'
+
+// SDK initialization is a side effect: do it once, outside React rendering.
+const telegram = initializeTelegram()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <App telegram={telegram} />
   </StrictMode>,
 )

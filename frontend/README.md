@@ -1,75 +1,139 @@
-# React + TypeScript + Vite
+# SlotExam frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Минимум по исходному заданию первой недели: React + Vite + TypeScript, запуск Telegram SDK, имя пользователя, тема Telegram, структура pages/components/api и пример HTTP-запроса.
 
-Currently, two official plugins are available:
+Расширенная версия с карточками, фильтрами и mock-данными сохранена отдельно: /home/astrxgore/Projects/Slot-Exam-expanded-backup-2026-10-26. В рабочей версии этих функций нет. Коммиты не создавались.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Запуск
 
-## React Compiler
+Нужен совместимый с Vite Node.js: 20.19+ в ветке 20 или 22.12+; в этой рабочей копии используется Node.js 24.22.1. Системный Node.js 18 не подходит.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm ci
+npm run dev
+npm run lint
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Если установлен nvm, сначала выбери совместимую версию Node.js. npm run dev печатает локальный адрес. npm run build проверяет TypeScript и создаёт dist. npm run preview позволяет посмотреть собранную версию.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Файлы и поток данных
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+index.html
+  → src/main.tsx
+    → initializeTelegram()
+    → <App telegram={telegram} />
+      → <HomePage telegram={telegram} />
+        → <StatusMessage message={...} />
 ```
+
+- index.html — HTML-документ с контейнером root и подключением main.tsx.
+- main.tsx — инициализация SDK один раз и запуск React.
+- App.tsx — корневой React-компонент, передающий данные странице.
+- pages/HomePage.tsx — единственный экран: приветствие, статус запуска, пояснение.
+- components/StatusMessage.tsx — небольшой компонент сообщения.
+- telegram/init.ts — данные Telegram и привязка цветов темы.
+- api/profile.ts — пример настоящего GET /me. Сам по себе не вызывается.
+- index.css — базовые стили и запасные цвета для браузера.
+- .env.example — образец настройки адреса API.
+- docs/backend-handoff.md — что согласовать с бэкендером.
+
+## React и TypeScript в этих файлах
+
+Компонент — функция, возвращающая JSX, описание интерфейса. Имя компонента начинается с заглавной буквы. React вызывает его при построении интерфейса. JSX преобразуется инструментами сборки; браузер не исполняет .tsx напрямую.
+
+export делает объявление доступным из других файлов. import получает его. Для export default имя импорта можно выбирать; именованный export импортируют в фигурных скобках. import type нужен только для типов, в итоговом JavaScript его не будет.
+
+interface AppProps { telegram: TelegramContext } описывает форму аргумента. В записи function App({ telegram }: AppProps) фигурные скобки выполняют деструктуризацию аргумента, двоеточие задаёт его тип.
+
+В <HomePage telegram={telegram} /> слева имя prop, справа значение JavaScript. Фигурные скобки внутри JSX переключают с разметки на выражение JavaScript. Родитель передаёт данные дочернему компоненту через props.
+
+В HomePage используются два вида условного отображения:
+
+- condition ? first : second — выбор одного из двух значений;
+- condition && <p>...</p> — показать элемент только при истинном условии.
+
+Record<TelegramContext['mode'], string> требует строковое сообщение для каждого допустимого режима. TelegramContext['mode'] берёт тип свойства mode из интерфейса, то есть объединение browser | telegram | unavailable.
+
+Состояния useState здесь нет: на этом этапе данные запуска читаются один раз и кнопок, изменяющих интерфейс, нет. Цвета темы обновляются через CSS-переменные SDK. useEffect, навигация, обработчики записи и запросы при открытии экрана для этого задания не понадобились.
+
+## Инициализация Telegram
+
+isTMA() проверяет, распознаёт ли SDK окружение запуска. Это не проверка подписи пользователя.
+
+init() подключает SDK. Его возвращаемое значение cleanup — функция освобождения ресурсов SDK.
+
+initData.restore() читает данные запуска в состояние SDK. initData.user() получает разобранного пользователя. В установленной версии @telegram-apps/sdk 3.11.8 поле имени называется first_name.
+
+user?.first_name ?? null:
+
+- ?. безопасно обращается к свойству: если user отсутствует, результат undefined;
+- ?? заменяет null или undefined на запасное значение;
+- результат здесь — строка имени или null.
+
+В TelegramContext mode — объединение трёх строковых значений, firstName — string | null. Двоеточие после параметров initializeTelegram(): TelegramContext означает тип возвращаемого результата.
+
+try/catch оставляет понятный экран при ошибке SDK. В браузере имя не выдумывается.
+
+themeParams.mountSync() подключает обработку темы. bindCssVars() создаёт CSS-переменные вида --tg-theme-bg-color и автоматически обновляет их при событии смены темы. Возвращённая функция unbind снимает привязку.
+
+miniApp.ready.ifAvailable() сообщает клиенту, что приложение готово, если этот метод доступен.
+
+import.meta.hot — интерфейс Vite для горячего обновления в разработке. dispose регистрирует функции очистки при замене модуля, чтобы не накапливались подписки SDK. В production этот блок не выполняется.
+
+## main.tsx
+
+document.getElementById('root') находит контейнер из index.html. Суффикс ! — утверждение для TypeScript, что элемент существует. Проверки во время выполнения он не добавляет; соответствующий div действительно должен быть в HTML.
+
+createRoot(...).render(...) поручает React управлять содержимым контейнера. StrictMode включает дополнительные проверки в разработке и может повторно вызывать компоненты и эффекты. Поэтому инициализация SDK находится перед render, снаружи компонента.
+
+## CSS
+
+:root выбирает корневой HTML-элемент. Свойства --fallback-\* — CSS-переменные.
+
+var(--tg-theme-bg-color, var(--fallback-bg)) использует цвет Telegram, если переменная задана; иначе берёт запасной цвет. @media (prefers-color-scheme: dark) меняет запасные значения для тёмной темы браузера.
+
+.page — селектор по className="page". max-width ограничивает ширину, margin: 48px auto центрирует блок по горизонтали. box-sizing: border-box включает padding и border в заданный размер. overflow-wrap: anywhere разрешает перенос длинного имени.
+
+clamp(28px, 6vw, 40px) выбирает размер заголовка между 28 и 40 пикселями; среднее выражение зависит от ширины окна. env(safe-area-inset-top) — безопасный отступ устройства; max не позволяет ему стать меньше 24px.
+
+## Пример HTTP-запроса
+
+getMyProfile(rawInitData, signal?) — асинхронная функция в api/profile.ts; она содержит реальный fetch, но экран её не вызывает.
+
+Перед использованием надо согласовать с бэкендером URL, JSON-схему и авторизацию, создать .env.local по образцу .env.example, задать VITE_API_BASE_URL и перезапустить Vite.
+
+rawInitData — исходная строка из initData.raw(), а не JSON.stringify(initData.user()). В примере предложен заголовок Authorization: tma <rawInitData>; таблица API его не определяет, поэтому это пока предложение для согласования.
+
+signal?: AbortSignal — необязательный параметр для отмены запроса через AbortController. Promise<unknown> означает, что асинхронный результат пока имеет неизвестную форму: конкретный User DTO не согласован.
+
+await fetch(...) ждёт заголовки ответа; await response.json() (в данном случае Promise возвращается непосредственно) читает и разбирает JSON. HTTP 401/403/500 сами по себе не приводят к отклонению fetch: код явно проверяет response.ok. Ошибка сети отклонит Promise, ошибка разбора JSON — тоже.
+
+baseUrl.replace(/\/+$/, '') убирает завершающие слеши перед добавлением /me. Шаблонная строка с обратными кавычками и ${...} подставляет выражение внутрь строки.
+
+Переменные VITE\_\* попадают в клиентскую сборку. Адрес API хранить там можно, токен бота — нельзя. Проверку подписи, срока действия и прав выполняет бэкенд.
+
+## Что ещё не сделано
+
+- Проверка на настоящих аккаунтах Telegram через HTTPS.
+- Выбор UI-библиотеки вместе с дизайнером. Для одного тестового экрана библиотека не добавлена.
+- Согласование авторизации и полных DTO, подключение настоящего API.
+- MainButton разобран как тема обучения, но в минимальном экране не используется: действия для него пока нет.
+
+Существующий HTTPS-адрес Vercel можно использовать для ручной проверки после публикации этой версии командой. Туннель нужен только если решите открывать локальный dev-сервер в Telegram. Публикация и настройка бота этим изменением не выполнялись.
+
+## Проверка этой версии
+
+Сборка и ESLint проходят. HTTP-функция проверена с подменённым fetch: успешный JSON, нормализация URL, заголовок авторизации, передача AbortSignal, отсутствие конфигурации/данных, HTTP 403 и ошибка сети. Запросы наружу при этой проверке не отправлялись.
+
+Имя и смена цветов проверяются локально через mockTelegramEnv установленного SDK. Это имитация клиента с вымышленными данными, а не подтверждение настоящей авторизации. Проверку через бота на реальном аккаунте нужно выполнить отдельно.
+
+## Первоисточники
+
+- [React: props](https://react.dev/learn/passing-props-to-a-component).
+- [Vite: переменные окружения](https://vite.dev/guide/env-and-mode).
+- [MDN: Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+- [Telegram: Mini Apps](https://core.telegram.org/bots/webapps).
+
+У SDK в проекте сохранена версия 3.11.8. Точные методы сверены с типами установленного пакета; примеры текущего @tma.js/sdk могут отличаться.
