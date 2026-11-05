@@ -1,0 +1,39 @@
+:root {
+  /* fonts */
+  --font-family-base: "Segoe UI", "Roboto", sans-serif;
+  --font-family-empty: "Roboto", sans-serif;
+
+  /* background */
+  --color-bg-page: var(--tg-theme-secondary-bg-color, #f1f1f4);
+  --color-bg-card: var(--tg-theme-section-bg-color, #ffffff);
+
+  /* text */
+  --color-text-primary: var(--tg-theme-text-color, #111214);
+  --color-text-secondary: var(--tg-theme-subtitle-text-color, #5b6166);
+
+  /* accent */
+  --color-accent-primary: var(--tg-theme-button-color, #1a6fb5);
+  --color-accent-soft: #e3effa;
+  --color-accent-soft-text: var(--tg-theme-accent-text-color, #1a578f);
+  --color-accent-colloquium: #c2afff;
+  --color-accent-colloquium-text: #6700cf;
+
+  /* success */
+  --color-success-text: #186e2f;
+  --color-success-bg: #e6f4fa;
+
+  /* warning */
+  --color-warning-text: #7a4f00;
+  --color-warning-bg: #fff1d0;
+
+  /* error */
+  --color-error-text: var(--tg-theme-destructive-text-color, #a5231b);
+  --color-error-bg: #fce8e6;
+
+  /* neutral */
+  --color-neutral-text: #44494f;
+  --color-neutral-bg: #eceff0;
+
+  /* button text */
+  --color-button-text: var(--tg-theme-button-text-color, #ffffff);
+}

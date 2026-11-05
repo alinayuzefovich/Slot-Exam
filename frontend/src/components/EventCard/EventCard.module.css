@@ -6,21 +6,38 @@
   padding: 16px;
   border: 1px solid var(--fallback-border);
   border-radius: 14px;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
   text-align: left;
 }
 
 .card:hover {
-  border-color: var(--accent);
+  border-color: var(--color-accent-primary);
 }
 
 .tag {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 6px;
-  background: var(--surface);
+  background: var(--color-bg-page);
   font-size: 12px;
+  font-weight: 700;
+}
+
+.exam {
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+.colloquium {
+  background: var(--color-accent-colloquium);
+  color: var(--color-accent-colloquium-text)
+
+}
+
+.lab {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-soft-text);
 }
 
 .status {

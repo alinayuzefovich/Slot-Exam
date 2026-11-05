@@ -1,0 +1,15 @@
+:root {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.empty {
+  font-family: var(--font-family-empty);
+}

@@ -1,15 +1,17 @@
-import { init, initData, isTMA, miniApp, themeParams } from '@telegram-apps/sdk'
+import { init, initData, isTMA, miniApp, themeParams, type User, } from '@telegram-apps/sdk'
 
 // This is client-side display data, not a server-authenticated profile.
 export interface TelegramContext {
   mode: 'browser' | 'telegram' | 'unavailable'
   firstName: string | null
+  userInfo: User | undefined
 }
 
 export function initializeTelegram(): TelegramContext {
+  console.log('init th, isTma:', isTMA())
   try {
     if (!isTMA()) {
-      return { mode: 'browser', firstName: null }
+      return { mode: 'browser', firstName: null, userInfo: undefined }
     }
 
     const cleanup = init()
@@ -29,10 +31,11 @@ export function initializeTelegram(): TelegramContext {
     }
 
     miniApp.ready.ifAvailable()
-
-    return { mode: 'telegram', firstName: user?.first_name ?? null }
+    console.log(user)
+    return { mode: 'telegram', firstName: user?.first_name ?? null, userInfo: user }
   } catch {
     // An invalid launch must not leave the user with a blank screen.
-    return { mode: 'unavailable', firstName: null }
+    console.error('init fail')
+    return { mode: 'unavailable', firstName: null, userInfo: undefined }
   }
 }
