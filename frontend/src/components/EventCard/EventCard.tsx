@@ -1,3 +1,4 @@
+import ChevronIcon from '../../assets/icons/angle-bracket-gray-transparent-bg.svg?react'
 import type { Event, EventKind } from '../../types/event'
 import type { Slot } from '../../types/slot'
 import styles from './EventCard.module.css'
@@ -26,10 +27,13 @@ export function EventCard({ event, slots, bookedSlotId, onOpen }: Props) {
 
   return (
     <button className={styles.card} type="button" onClick={onOpen}>
-      <span className={`${styles.tag} ${styles[event.kind]}`}>{kindLabels[event.kind]}</span>
-      <strong>{event.title}</strong>
-      <span className='muted'>{event.dateLabel} ·  {event.group}</span>
-      <span className={styles.status}>{status}</span>
+      <span className={styles.content}>
+        <span className={`${styles.tag} ${styles[event.kind]}`}>{kindLabels[event.kind]}</span>
+        <strong>{event.title}</strong>
+        <span className='muted'>{event.dateLabel} ·  {event.group}</span>
+        <span className={styles.status}>{status}</span>
+      </span>
+      <ChevronIcon aria-hidden="true" focusable="false" />
     </button >
   )
 }

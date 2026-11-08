@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
   width: 100%;
   padding: 16px;
@@ -9,6 +9,15 @@
   background: var(--color-bg-card);
   color: var(--color-text-primary);
   text-align: left;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
 }
 
 .card:hover {
