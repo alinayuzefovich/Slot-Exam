@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain;
+namespace Domain.ValueTypes;
 
-class FullName
+public class FullName
 {
     public string Name { get; }
     public string Surname { get; }

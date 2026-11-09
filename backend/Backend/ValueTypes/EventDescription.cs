@@ -1,11 +1,11 @@
-﻿using Domain;
+﻿using Domain.ValueTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class EventDescription
+public class EventDescription
 {
     public string Title { get; }
     public string Description { get; }
