@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain;
+namespace Domain.ValueTypes;
 
-class Location
+public class Location
 {
     public Address Address { get; }
     public string ClassRoom { get; }
+
+    public Location (Address address, int classRoom)
+        => new Location(address, classRoom.ToString());
 
     public Location (Address address, string classRoom)
     {
