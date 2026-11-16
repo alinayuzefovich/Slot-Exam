@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j0P0Pdx0Dm8=",
+  "dgSpecHash": "CJscYZGOQIk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

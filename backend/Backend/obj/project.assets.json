@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
+      "projectName": "SlotExam.Domain",
+      "projectPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
       "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",

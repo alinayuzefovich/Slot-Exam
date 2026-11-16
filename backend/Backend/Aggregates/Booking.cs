@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+namespace Domain.Aggregates;
+
 public class Booking: AggregateRoot
 {
     public Guid SlotId { get; private set; }

@@ -1,4 +1,6 @@
-﻿using Domain.Enums;
+﻿using Domain.DomainEvents;
+using Domain.Enums;
+using Domain.ValueTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,6 @@ namespace Domain.Aggregates;
 public class StudyEvent: AggregateRoot
 {
     public EventDescription Description { get; }
-    public List<Slot> Slots { get; }
     public StudyEventStatus Status { get; private set; }
     public int OwnerId { get; }
     public Address Address { get; }
@@ -23,7 +24,6 @@ public class StudyEvent: AggregateRoot
         Status = StudyEventStatus.Draft;
         OwnerId = ownerId;
         Address = address;
-        Slots = new List<Slot>();
     }
 
     public static StudyEvent CreateEvent(EventDescription description, int ownerId, Address address)
@@ -31,15 +31,16 @@ public class StudyEvent: AggregateRoot
         return new StudyEvent(Guid.NewGuid(), description, ownerId, address);
     }
 
-    public void AddSlot(Slot slot)
+    public Slot AddSlot(int capacity, DateTime startTime, DateTime endTime, string classRoom)
     {
-        if (slot.Location.Address != Address)
-            throw new ArgumentException("Адрес слота и мероприятия должен совпадать");
+        var slot = Slot.CreateSlot(Id, capacity, startTime, endTime, new Location(Address, classRoom));
 
         if (Status == StudyEventStatus.Cancelled)
             throw new Exception("Невозможно добавить слот к отменённому мероприятию");
 
-        Slots.Add(slot);
+        AddDomainEvent(new SlotAddedEvent(slot.Id, Id, DateTime.UtcNow));
+
+        return slot;
     }
 }
 

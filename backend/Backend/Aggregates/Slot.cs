@@ -1,4 +1,5 @@
-﻿using Domain.ValueTypes;
+﻿using Domain.DomainEvents;
+using Domain.ValueTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +14,22 @@ public class Slot: AggregateRoot
     public DateTime EndTime { get; }
     public Guid StudyEventId { get; }
     public Location Location { get; }
-    public List<Booking> Bookings { get; } 
     public int CurrentCapacity { get; private set; }
     public int MaxCapacity { get; }
     public bool IsFull => MaxCapacity == CurrentCapacity;
     public bool IsPast => DateTime.UtcNow > StartTime;
 
-    private Slot(Guid id, Guid studyEventId, int capacity, DateTime startTime, DateTime endTime)
+    private Slot(Guid id, Guid studyEventId, int capacity, DateTime startTime, DateTime endTime, Location l)
     {
         Id = id;
         MaxCapacity = capacity;
         StartTime = startTime;
         EndTime = endTime;
         StudyEventId = studyEventId;
-        Bookings = new List<Booking>();
+        Location = l;
     }
 
-    public static Slot CreateSlot(Guid studyEventId, int capacity, DateTime startTime, DateTime endTime)
+    public static Slot CreateSlot(Guid studyEventId, int capacity, DateTime startTime, DateTime endTime, Location location)
     {
         if (startTime > DateTime.UtcNow)
             throw new ArgumentException("Время слота который вы пытаетесь создать уже прошло");
@@ -37,7 +37,7 @@ public class Slot: AggregateRoot
         if (capacity <= 0)
             throw new ArgumentException("Нельзя создать слот с нулевой вместимостью");
 
-        return new Slot(Guid.NewGuid(), studyEventId, capacity, startTime, endTime);
+        return new Slot(Guid.NewGuid(), studyEventId, capacity, startTime, endTime, location);
     }
 
     public Booking Book(Guid userId)
@@ -48,6 +48,12 @@ public class Slot: AggregateRoot
         if (IsPast)
             throw new ArgumentException("Невозможно записаться, слот уже прошёл");
 
-        return Booking.CreateBooking(userId, Id);
+        var booking = Booking.CreateBooking(userId, Id);
+        
+        CurrentCapacity -= 1;
+
+        AddDomainEvent(new BookingConfirmedEvent(booking.Id, Id, userId, DateTime.UtcNow));
+
+        return booking;
     }
 }

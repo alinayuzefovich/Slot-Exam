@@ -10,10 +10,8 @@ public class User: AggregateRoot
     public FullName? FullName { get; private set; }
     public Guid? GroupId { get; private set; }
     public DateTime? CreatedAt { get; private set; }
-    public List<Booking> Bookings { get; private set; } 
-        = new List<Booking>();
     public bool IsCreator { get; private set; }
-    public bool IsNotificationsEnabled { get; private set; }
+    public bool IsNotificationsEnabled { get; set; }
     public bool IsProfileCorrect => FullName != null && GroupId != null;
 
     private User(Guid id, long telegramId, bool isCreator = false, bool isNotificationEnabled = false,
@@ -39,5 +37,13 @@ public class User: AggregateRoot
             throw new ArgumentException("Id группы не может быть пустым");
 
         GroupId = groupId;
+    }
+
+    public void SetFullName(FullName name)
+    {
+        if (name == null)
+            throw new ArgumentNullException("Имя пользователя не может быть пустым");
+
+        FullName = name;
     }
 }

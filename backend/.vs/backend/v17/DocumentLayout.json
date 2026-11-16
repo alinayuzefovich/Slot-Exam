@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{145FDF51-C218-4D7B-A58D-4276173D65EB}|SlotExam.Application\\SlotExam.Application.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\slotexam.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{145FDF51-C218-4D7B-A58D-4276173D65EB}|SlotExam.Application\\SlotExam.Application.csproj|solutionrelative:slotexam.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{145FDF51-C218-4D7B-A58D-4276173D65EB}|SlotExam.Application\\SlotExam.Application.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\slotexam.application\\slotexam.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{145FDF51-C218-4D7B-A58D-4276173D65EB}|SlotExam.Application\\SlotExam.Application.csproj|solutionrelative:slotexam.application\\slotexam.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\aggregates\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\aggregates\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\aggregates\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\aggregates\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\eventdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\eventdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\aggregates\\studyevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\aggregates\\studyevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|c:\\users\\alexey\\desktop\\slotexam\\slot-exam\\backend\\backend\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5C96122-AFE7-4B1F-B562-E04792D9CD73}|Backend\\Domain.csproj|solutionrelative:backend\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +34,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SlotExam.Application",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
+              "RelativeDocumentMoniker": "SlotExam.Application\\SlotExam.Application.csproj",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
+              "RelativeToolTip": "SlotExam.Application\\SlotExam.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-16T12:08:08.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "SlotExam.Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\Class1.cs",
+              "RelativeToolTip": "SlotExam.Application\\Class1.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T12:07:31.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudyEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\StudyEvent.cs",
+              "RelativeDocumentMoniker": "Backend\\Aggregates\\StudyEvent.cs",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\StudyEvent.cs",
+              "RelativeToolTip": "Backend\\Aggregates\\StudyEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T12:01:25.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Services\\BookingService.cs",
+              "RelativeToolTip": "Backend\\Services\\BookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T11:55:02.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Slot.cs",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\Slot.cs",
+              "RelativeDocumentMoniker": "Backend\\Aggregates\\Slot.cs",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\Slot.cs",
+              "RelativeToolTip": "Backend\\Aggregates\\Slot.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T11:53:23.88Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -55,119 +108,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FullName.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\FullName.cs",
-              "RelativeDocumentMoniker": "Backend\\FullName.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\FullName.cs",
-              "RelativeToolTip": "Backend\\FullName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:17:36.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Slot.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Slot.cs",
-              "RelativeDocumentMoniker": "Backend\\Slot.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Slot.cs",
-              "RelativeToolTip": "Backend\\Slot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:07:18.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Booking.cs",
-              "RelativeDocumentMoniker": "Backend\\Booking.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Booking.cs",
-              "RelativeToolTip": "Backend\\Booking.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAoAAAAPAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\Booking.cs",
+              "RelativeDocumentMoniker": "Backend\\Aggregates\\Booking.cs",
+              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Aggregates\\Booking.cs",
+              "RelativeToolTip": "Backend\\Aggregates\\Booking.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAD4vwkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:05:38.044Z",
+              "WhenOpened": "2026-11-16T11:52:19.023Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Address.cs",
-              "RelativeDocumentMoniker": "Backend\\Address.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Address.cs",
-              "RelativeToolTip": "Backend\\Address.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T11:58:04.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Location.cs",
-              "RelativeDocumentMoniker": "Backend\\Location.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Location.cs",
-              "RelativeToolTip": "Backend\\Location.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T11:55:27.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Event.cs",
-              "RelativeDocumentMoniker": "Backend\\Event.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Event.cs",
-              "RelativeToolTip": "Backend\\Event.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T11:53:54.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EventDescription.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\EventDescription.cs",
-              "RelativeDocumentMoniker": "Backend\\EventDescription.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\EventDescription.cs",
-              "RelativeToolTip": "Backend\\EventDescription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T11:53:59.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\User.cs",
-              "RelativeDocumentMoniker": "Backend\\User.cs",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\User.cs",
-              "RelativeToolTip": "Backend\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T11:44:04.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Domain.csproj",
-              "DocumentMoniker": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Domain.csproj",
-              "RelativeDocumentMoniker": "Backend\\Domain.csproj",
-              "ToolTip": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\Domain.csproj",
-              "RelativeToolTip": "Backend\\Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-02T11:43:16.947Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
