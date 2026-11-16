@@ -10,6 +10,8 @@ namespace Domain.Repositories;
 public interface IUserRepository
 {
     Task<User?> GetByIdAsync(Guid id, CancellationToken ct);
+    Task<User?> GetByTelegramIdAsync(long telegramId, CancellationToken ct);
     Task AddAsync(User user, CancellationToken ct);
+    Task UpdateAsync(User user, CancellationToken ct);
     void Remove(User user);
 }

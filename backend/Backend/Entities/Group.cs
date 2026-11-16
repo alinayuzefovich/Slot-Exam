@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities;
 
-public class Group
+public class Group: Entity
 {
-    public Guid GroupId { get; }
     public string Name { get; }
 
-    private Group(Guid id,string name)
+    private Group(Guid id, string name)
     {
-        GroupId = id;
+        Id = id;
         Name = name;
     }
 

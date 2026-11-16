@@ -10,6 +10,9 @@ namespace Domain.Repositories;
 public interface IBookingRepository
 {
     Task<Booking?> GetByIdAsync(Guid id, CancellationToken ct);
+    Task<IEnumerable<Booking>> GetByIdsAsync(Guid ids, CancellationToken ct);
+    Task<IEnumerable<Booking>> GetByUserIdAsync(Guid userId, CancellationToken ct);
+    Task<IEnumerable<Booking>> GetBySlotIdAsync(Guid slotId, CancellationToken ct);
     Task AddAsync(Booking booking, CancellationToken ct);
     void Remove(Booking booking);
 }

@@ -1,0 +1,5 @@
+C:\Users\Alexey\Desktop\SlotExam\Slot-Exam\backend\Backend\obj\Debug\net8.0\SlotExam.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexey\Desktop\SlotExam\Slot-Exam\backend\Backend\obj\Debug\net8.0\SlotExam.Domain.AssemblyInfoInputs.cache
+C:\Users\Alexey\Desktop\SlotExam\Slot-Exam\backend\Backend\obj\Debug\net8.0\SlotExam.Domain.AssemblyInfo.cs
+C:\Users\Alexey\Desktop\SlotExam\Slot-Exam\backend\Backend\obj\Debug\net8.0\SlotExam.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Alexey\Desktop\SlotExam\Slot-Exam\backend\Backend\obj\Debug\net8.0\SlotExam.Domain.sourcelink.json
