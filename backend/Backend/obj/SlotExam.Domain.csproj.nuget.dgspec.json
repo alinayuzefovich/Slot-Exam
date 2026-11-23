@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {}
+    "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {
+    "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
         "projectName": "SlotExam.Domain",
-        "projectPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
+        "projectPath": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj",
         "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config",

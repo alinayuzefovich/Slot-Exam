@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Repositories;
 
-public interface ISlotRepository
+public interface ISlotRepository: IRepository<Slot>
 {
-    Task<Slot?> GetByIdAsync(Guid id, CancellationToken ct);
     Task<IEnumerable<Slot>> GetByIdsAsync(IEnumerable<Guid> ids, CancellationToken ct);
     Task<IEnumerable<Slot>> GetByEventIdAsync(Guid eventId, CancellationToken ct);
-    Task AddAsync(Slot slot, CancellationToken ct);
-    void Remove(Slot slot);
 }

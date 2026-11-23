@@ -10,10 +10,10 @@ public class EventDescription
     public string Title { get; }
     public string Description { get; }
     public string Type { get; }
-    public int? DeadlineHours { get; }
+    public int DeadlineHours { get; }
     public Location Location { get; }
 
-    public EventDescription(string title, string description, string type, Location location, int? deadlineHours=null)
+    public EventDescription(string title, string description, string type, Location location, int deadlineHours=-1)
     {
         Title = title;
         Description = description;

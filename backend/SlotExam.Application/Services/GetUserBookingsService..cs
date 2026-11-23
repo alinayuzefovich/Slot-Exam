@@ -7,24 +7,24 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Handlers;
+namespace Application.Services;
 
 
-public class GetUserBookingsHandler
+public class GetUserBookingsService
 {
     private readonly IBookingRepository _bookings;
     private readonly ISlotRepository _slots;
 
-    public GetUserBookingsHandler( IBookingRepository bookings, ISlotRepository slots)
+    public GetUserBookingsService(IBookingRepository bookings, ISlotRepository slots)
     {
         _bookings = bookings;
         _slots = slots;
     }
 
-    public async Task<IEnumerable<BookingDTO>> HandleAsync(GetUserBookingsQuery query, CancellationToken ct)
+    public async Task<IEnumerable<BookingDto>> HandleAsync(GetUserBookingsQuery query, CancellationToken ct)
     {
         var bookings = await _bookings.GetByUserIdAsync(query.userId, ct);
-        var result = new List<BookingDTO>();
+        var result = new List<BookingDto>();
         var slotIds = bookings.Select(booking => booking.SlotId).Distinct();
         var slots = await _slots.GetByIdsAsync(slotIds, ct);
 
@@ -35,7 +35,7 @@ public class GetUserBookingsHandler
             if (!slotsById.TryGetValue(booking.SlotId, out var slot))
                 throw new KeyNotFoundException($"Не существует слота с id {booking.SlotId}");
 
-            result.Add(new BookingDTO(
+            result.Add(new BookingDto(
                 booking.Id,
                 slot.StudyEventId,
                 booking.SlotId,

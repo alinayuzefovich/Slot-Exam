@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Repositories;
 
-public interface IUserRepository
+public interface IUserRepository: IRepository<User>
 {
-    Task<User?> GetByIdAsync(Guid id, CancellationToken ct);
     Task<User?> GetByTelegramIdAsync(long telegramId, CancellationToken ct);
-    Task AddAsync(User user, CancellationToken ct);
     Task UpdateAsync(User user, CancellationToken ct);
-    void Remove(User user);
 }
