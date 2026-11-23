@@ -7,15 +7,15 @@ public class User: AggregateRoot
 {
     public Guid UserId { get; }
     public long TelegramId { get; }
-    public FullName? FullName { get; private set; }
-    public Guid? GroupId { get; private set; }
-    public DateTime? CreatedAt { get; private set; }
+    public FullName FullName { get; private set; }
+    public Guid GroupId { get; private set; }
+    public DateTime CreatedAt { get; private set; }
     public bool IsCreator { get; private set; }
     public bool IsNotificationsEnabled { get; set; }
-    public bool IsProfileCorrect => FullName != null && GroupId != null;
+    public bool IsProfileCorrect => FullName != null && GroupId != Guid.Empty;
 
     private User(Guid id, long telegramId, bool isCreator = false, bool isNotificationEnabled = false,
-        FullName? fullName=null, Guid? groupId= null)
+        FullName fullName=null, Guid groupId=default(Guid))
     {
         UserId = id;
         TelegramId = telegramId;
@@ -45,5 +45,10 @@ public class User: AggregateRoot
             throw new ArgumentNullException("Имя пользователя не может быть пустым");
 
         FullName = name;
+    }
+
+    public string? GetFullName()
+    {
+        return FullName != null ? FullName.ToString() : null;
     }
 }

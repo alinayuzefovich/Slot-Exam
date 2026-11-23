@@ -4,4 +4,4 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public record BookingDTO(Guid id, Guid eventId, Guid slotId, BookingStatus status, DateTime startTime, DateTime endTime);
+public record BookingDto(Guid id, Guid eventId, Guid slotId, BookingStatus status, DateTime startAt, DateTime endAt);

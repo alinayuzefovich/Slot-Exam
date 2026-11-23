@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
       "projectName": "SlotExam.Application",
-      "projectPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
+      "projectPath": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\SlotExam.Application\\SlotExam.Application.csproj",
       "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\SlotExam.Application\\obj\\",
+      "outputPath": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\SlotExam.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {
-              "projectPath": "C:\\Users\\Alexey\\Desktop\\SlotExam\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj"
+            "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj": {
+              "projectPath": "C:\\Users\\Alexey\\Desktop\\slotexam2\\Slot-Exam\\backend\\Backend\\SlotExam.Domain.csproj"
             }
           }
         }

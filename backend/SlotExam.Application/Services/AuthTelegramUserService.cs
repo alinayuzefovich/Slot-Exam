@@ -8,13 +8,13 @@ using Domain.Repositories;
 using Domain.Aggregates;
 using Application.Commands;
 
-namespace Application.Handlers;
+namespace Application.Services;
 
-public class AuthTelegramUserCommandHandler
+public class AuthTelegramUserCommandService
 {
     private readonly IUserRepository _users;
 
-    public AuthTelegramUserCommandHandler(IUserRepository users)
+    public AuthTelegramUserCommandService(IUserRepository users)
     {
         _users = users;
     }

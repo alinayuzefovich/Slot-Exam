@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SlotExam.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2582f495209fcaf848299eacb5bbc5cf01dca4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b00a480f868107cbdafec6cfb233282bf1bc3a80")]
 [assembly: System.Reflection.AssemblyProductAttribute("SlotExam.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SlotExam.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

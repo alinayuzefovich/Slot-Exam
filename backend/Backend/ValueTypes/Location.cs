@@ -20,6 +20,11 @@ public class Location
         ClassRoom = classRoom;
     }
 
+    public string GetAddress()
+    {
+        return Address.ToString();
+    }
+
     public override string ToString()
     {
         return Address.ToString() + $", ауд. {ClassRoom}";

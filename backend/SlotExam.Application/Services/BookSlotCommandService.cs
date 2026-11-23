@@ -7,16 +7,16 @@ using Domain.Repositories;
 using Domain.Aggregates;
 using Application.Commands;
 
-namespace Application.Handlers;
+namespace Application.Services;
 
-public class BookSlotCommandHandler
+public class BookSlotCommandService
 {
     private readonly IUserRepository _users;
     private readonly ISlotRepository _slots;
     private readonly IBookingRepository _bookings;
     private readonly IStudyEventRepository _studyEvents;
 
-    public BookSlotCommandHandler(
+    public BookSlotCommandService(
         IUserRepository users,
         ISlotRepository slots,
         IBookingRepository bookings,

@@ -56,4 +56,14 @@ public class Slot: AggregateRoot
 
         return booking;
     }
+
+    public void CancelBooking()
+    {
+        if (CurrentCapacity == MaxCapacity)
+            throw new Exception("Нельзя отменить запись если нет записей");
+        
+        CurrentCapacity += 1;
+
+        AddDomainEvent(new BookingCancelledEvent(Id, DateTime.UtcNow));
+    }
 }

@@ -7,10 +7,7 @@ using Domain.Entities;
 
 namespace Domain.Repositories;
 
-public interface IGroupRepository
+public interface IGroupRepository: IRepository<Group>
 {
-    Task<Group?> GetByIdAsync(Guid id, CancellationToken ct);
     Task<Group?> GetByNameAsync(string name, CancellationToken ct);
-    Task AddAsync(Group group, CancellationToken ct);
-    void Remove(Group group);
 }

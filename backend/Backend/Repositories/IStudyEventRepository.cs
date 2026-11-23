@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Repositories;
 
-public interface IStudyEventRepository
+public interface IStudyEventRepository: IRepository<StudyEvent>
 {
-    Task<StudyEvent?> GetByIdAsync(Guid id, CancellationToken ct);
-    Task AddAsync(StudyEvent studyEvent, CancellationToken ct);
-    void Remove(StudyEvent studyEvent);
+    Task<IEnumerable<StudyEvent>> GetByGroupIdAsync(Guid groupIds, CancellationToken ct);
 }
 

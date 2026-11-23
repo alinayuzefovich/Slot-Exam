@@ -7,14 +7,14 @@ using Application.Commands;
 using Domain.Aggregates;
 using Domain.ValueTypes;
 
-namespace Application.Handlers;
+namespace Application.Services;
 
-class EditProfileCommandHandler
+class EditProfileCommandService
 {
     private readonly IUserRepository _users;
     private readonly IGroupRepository _groups;
 
-    public EditProfileCommandHandler(IUserRepository users, IGroupRepository groups)
+    public EditProfileCommandService(IUserRepository users, IGroupRepository groups)
     {
         _users = users;
         _groups = groups;
